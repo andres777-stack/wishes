@@ -76,12 +76,20 @@ WSGI_APPLICATION = 'projectoBase.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-
-
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql', # cambiar la base de datos a postgres
+        'NAME': 'first_postgres_db', # nombre de la base de datos, se creará en el servidor de Postgres a continuación
+        'USER': 'postgres', # postgres para macOS o 'USER': 'postgres', para Windows
+        'PASSWORD': 'meher2', # contraseña a la que la cambió al instalar Postgres
+        'HOST': '127.0.0.1', # dirección IP localhost
+        'PORT': '5432', # puerto del servidor postgres predeterminado
     }
+
+
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': BASE_DIR / 'db.sqlite3',
+    #}
 }
 
 
