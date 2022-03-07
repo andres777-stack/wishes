@@ -9,7 +9,7 @@ from acceso.models import User
 class LoginForm(forms.Form):
 
     Username = forms.CharField(
-        label = 'Usuario',
+        label = 'Nombre',
         required = True,
         widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder' : 'Usuario'})
     )
